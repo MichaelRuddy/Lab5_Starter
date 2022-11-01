@@ -31,10 +31,10 @@ volumeLevel.addEventListener('change', function() {
     myIcon.src = "assets/icons/volume-level-1.svg"
   }
   else if(volumeLevel.value < 67) {
-    myIcon.src = "assets/images/volume-level-2.svg"
+    myIcon.src = "assets/icons/volume-level-2.svg"
   }
   else {
-    myIcon.src = "assets/images/volume-level-3.svg"
+    myIcon.src = "assets/icons/volume-level-3.svg"
   }  
   myAudio.volume = volumeLevel.value / 100;
 });
