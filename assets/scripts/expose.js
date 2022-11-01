@@ -22,7 +22,8 @@ selector.addEventListener('change', function() {
     myAudio.src = "assets/audio/" + selector.value + ".mp3";
   });
 myButton.addEventListener('click', function() {
-  if(currChoice == 'party-horn') {
+  var curr = selector.value;
+  if(curr == 'party-horn') {
     jsConfetti.addConfetti();
   }
   myAudio.play();
