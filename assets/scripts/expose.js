@@ -5,6 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   // TODO
 }
+const jsConfetti = new JSConfetti()
 var selector = document.getElementById('horn-select');
 var images = document.querySelectorAll("img");
 var myImage = document.querySelector('img');
@@ -21,6 +22,9 @@ selector.addEventListener('change', function() {
     myAudio.src = "assets/audio/" + selector.value + ".mp3";
   });
 myButton.addEventListener('click', function() {
+  if(currChoice == 'party-horn') {
+    jsConfetti.addConfetti();
+  }
   myAudio.play();
 });
 volumeLevel.addEventListener('change', function() {
