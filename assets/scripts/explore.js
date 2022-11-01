@@ -25,9 +25,9 @@ myButton.addEventListener('click', function() {
   }
   synth.speak(utterThis);
   inputTxt.blur();
-  if(utterThis.onend) {
-    myImage.src = "assets/images/smiling.png";
-  }
+  utterThis.addEventListener('end', (event) => {
+    myImage.src = "assets/images/smiling.png"
+  });
 });
 
 
