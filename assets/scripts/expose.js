@@ -25,10 +25,10 @@ myButton.addEventListener('click', function() {
 });
 volumeLevel.addEventListener('change', function() {
   if(volumeLevel.value == 0) {
-    myIcon.src = "assets/images/volume-level-0.svg"
+    myIcon.src = "assets/icons/volume-level-0.svg"
   }
   else if(volumeLevel.value < 33) {
-    myIcon.src = "assets/images/volume-level-1.svg"
+    myIcon.src = "assets/icons/volume-level-1.svg"
   }
   else if(volumeLevel.value < 67) {
     myIcon.src = "assets/images/volume-level-2.svg"
