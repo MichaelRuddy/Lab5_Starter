@@ -11,5 +11,5 @@ selector.addEventListener('change', function() {
     console.log(selector.value);
     var currChoice = selector.value;
     var currDir = "assets/images/";
-    myImage.src = "assets/images/" + selector.value;
+    myImage.src = "assets/images/" + selector.value + ".svg";
   });
