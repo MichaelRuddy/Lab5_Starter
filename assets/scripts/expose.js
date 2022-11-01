@@ -7,7 +7,7 @@ function init() {
 }
 var selector = document.querySelector('horn-select');
 var myImage = document.querySelector('img');
-selectElement.addEventListener('change', function() {
+selector.addEventListener('change', function() {
     console.log(selector.value);
     var currChoice = selector.value;
     var currDir = "assets/images/";
