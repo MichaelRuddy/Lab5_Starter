@@ -14,6 +14,7 @@ if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !=
   speechSynthesis.onvoiceschanged = populateVoiceList;
 }
 myButton.addEventListener('click', function() {
+  myImage.src = "assets/images/smiling-open.png";
   const voices = speechSynthesis.getVoices();
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
   const selectedOption = document.getElementById("voice-select").selectedOptions[0].getAttribute('data-name');
@@ -22,7 +23,6 @@ myButton.addEventListener('click', function() {
       utterThis.voice = voices[i];
     }
   }
-  myImage.src = "assets/images/smiling-open.png";
   synth.speak(utterThis);
   inputTxt.blur();
   myImage.src = "assets/images/smiling.png";
