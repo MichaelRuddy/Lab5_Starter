@@ -5,7 +5,7 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   // TODO
 }
-
+var myImage = document.querySelector('img');
 var myButton = document.querySelector('button');
 var inputTxt = document.getElementById('text-to-speak');
 const synth = window.speechSynthesis;
@@ -22,8 +22,10 @@ myButton.addEventListener('click', function() {
       utterThis.voice = voices[i];
     }
   }
+  myImage.src = "assets/images/smiling-open.png";
   synth.speak(utterThis);
   inputTxt.blur();
+  myImage.src = "assets/images/smiling.png";
 });
 
 
@@ -48,6 +50,7 @@ function populateVoiceList() {
     option.setAttribute('data-name', voices[i].name);
     document.getElementById("voice-select").appendChild(option);
   }
-}
+} 
+//hey
 
 
