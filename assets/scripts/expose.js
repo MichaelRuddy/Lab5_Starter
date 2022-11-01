@@ -5,12 +5,11 @@ window.addEventListener('DOMContentLoaded', init);
 function init() {
   // TODO
 }
-selector = document.querySelector('horn-select');
-selectElement.addEventListener('change', (event) => {
-    var myImage = document.querySelector("main[src='assets/images/no-image.png']");
-    console.log(event.target.value)
-    var imageDir = "assets/images/";
-    var currChoice = event.target.value;
-    var currImage = imageDir.concat()
-    myImage.src = 'assets/images/' + 'event.target.value'
+var selector = document.querySelector('horn-select');
+var myImage = document.querySelector('img');
+selectElement.addEventListener('change', function() {
+    console.log(selector.value);
+    var currChoice = selector.value;
+    var currDir = "assets/images/";
+    myImage.src = "assets/images/" + selector.value;
   });
