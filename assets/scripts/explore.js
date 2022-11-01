@@ -15,7 +15,7 @@ if (typeof speechSynthesis !== 'undefined' && speechSynthesis.onvoiceschanged !=
 }
 myButton.addEventListener('click', function() {
   const utterThis = new SpeechSynthesisUtterance(inputTxt.value);
-  const selectedOption = voiceSelect.selectedOptions[0].getAttribute('data-name');
+  const selectedOption = document.getElementById("voice-select").selectedOptions[0].getAttribute('data-name');
   for (let i = 0; i < voices.length ; i++) {
     if (voices[i].name === selectedOption) {
       utterThis.voice = voices[i];
